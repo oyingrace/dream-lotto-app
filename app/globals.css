@@ -3,25 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary-blue: #3B82F6;
+  --secondary-blue: #2563EB;
+  --accent-yellow: #FACC15;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F5F5F5;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.lotto-gradient {
+  background: linear-gradient(45deg, #3B82F6, #2563EB);
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white font-semibold py-3 px-4 rounded-lg w-full flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-white text-blue-600 font-semibold py-3 px-4 rounded-lg w-full border border-blue-600 flex items-center justify-center gap-2;
+}
+
+.game-card {
+  @apply border rounded-xl p-4 flex flex-col;
 }
