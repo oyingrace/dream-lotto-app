@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { IoClose, IoArrowBack } from "react-icons/io5";
+import { IoArrowBack } from "react-icons/io5";
+import Link from 'next/link';
 
 export default function GameDetailModal({ game, onClose }) {
   const [selectedNumbers, setSelectedNumbers] = useState([]);
@@ -16,7 +17,7 @@ export default function GameDetailModal({ game, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4">
-      <div className="bg-white rounded-lg w-full max-w-md h-[90vh] flex flex-col overflow-hidden">
+      <div className="bg-white rounded-lg w-full max-w-md h-[85vh] flex flex-col overflow-hidden">
         {/* Header with Close Button */}
         <div className="flex items-center justify-between p-4 border-b">
           <button onClick={onClose}>
@@ -25,7 +26,7 @@ export default function GameDetailModal({ game, onClose }) {
         </div>
 
         {/* Scrollable Content */}
-        <div className="overflow-y-auto flex-1 p-4">
+        <div className="overflow-y-auto flex-1 p-4 pb-16">
           {/* Game Image */}
           <div className="mb-4 flex justify-center">
             <img src={game.image} alt={game.name} className="w-32 h-32 object-contain" />
@@ -33,12 +34,11 @@ export default function GameDetailModal({ game, onClose }) {
           <h2 className="text-xl font-bold text-center mb-4">{game.name}</h2>
           <p className="text-sm text-gray-600 text-center mb-6">{game.description}</p>
 
-         
-         {/* Number Selection */}
-         <div className="bg-white rounded-lg p-4 mb-6 shadow">
+          {/* Number Selection */}
+          <div className="bg-white rounded-lg p-4 mb-6 shadow">
             <h3 className="font-semibold mb-3">Select Your Numbers</h3>
             <div className="grid grid-cols-5 gap-2 max-h-48 overflow-y-auto">
-              {Array.from({ length: 100 }, (_, i) => i + 0).map((num) => (
+              {Array.from({ length: 100 }, (_, i) => i + 1).map((num) => (
                 <button
                   key={num}
                   className={`w-full aspect-square rounded-full border flex items-center justify-center text-lg ${
@@ -95,10 +95,12 @@ export default function GameDetailModal({ game, onClose }) {
         </div>
 
         {/* Footer with Place Bet Button */}
-        <div className="p-4 border-t bg-white">
+        <div className="p-4 border-t bg-white sticky bottom-0">
+        <Link href="/home">
           <button className="w-full bg-yellow-500 text-white py-3 rounded-lg font-semibold text-lg">
             Place Bet
           </button>
+          </Link>
         </div>
       </div>
     </div>
