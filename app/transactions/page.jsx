@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { IoArrowBack } from 'react-icons/io5';
 import Header from '../components/header';
 import { Navigation } from '../components/navigation';
-import RecentTransactions from '../components/RecentTransactions';
+import RecentTransactions from '../components/recentTransactions';
 
 const TransactionsPage = () => {
   const router = useRouter();
