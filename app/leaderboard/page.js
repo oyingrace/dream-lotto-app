@@ -118,7 +118,9 @@ export default function LeaderboardPage() {
           </div>
         </div>
 
-        <Navigation activePage="leaderboard"/>
+        <div className="sticky bottom-0 w-full">
+        <Navigation activePage="leaderboard" />
+      </div>
       </div>
     );
 }
