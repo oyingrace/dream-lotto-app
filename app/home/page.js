@@ -7,6 +7,7 @@ import Header from "../components/header";
 import QuickActions from '../components/quickactions'; 
 import LatestResults from '../components/latestresults';
 import RecentWinners from '../components/recentWinners';
+import { useRouter } from 'next/navigation';
 
 const LatestResultsData = [
   { title: "Premier 2-Sure", date: "Feb 16, 2025", numbers: [90, 4], winner: "Ade Johnson", amount: "550,000" },
@@ -15,7 +16,9 @@ const LatestResultsData = [
 
 
 export default function DashboardPage() {
+  const router = useRouter();
   return (
+    
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <Header />
@@ -58,7 +61,9 @@ export default function DashboardPage() {
               <div className="p-3">
                 <h4 className="font-semibold mb-1">Premier 2-sure</h4>
                 <p className="text-xs text-gray-600 mb-2">Pick 2 numbers, match both to win big!</p>
-                <button className="w-full bg-yellow-500 text-white py-2 rounded-lg text-sm font-semibold">Play Now</button>
+                <button 
+                 onClick={() => router.push('/games')}
+                className="w-full bg-yellow-500 text-white py-2 rounded-lg text-sm font-semibold">Play Now</button>
               </div>
             </div>
             <div className="border rounded-lg overflow-hidden">
@@ -68,7 +73,9 @@ export default function DashboardPage() {
               <div className="p-3">
                 <h4 className="font-semibold mb-1">Nap3</h4>
                 <p className="text-xs text-gray-600 mb-2">Pick 3 numbers, match all to win big!</p>
-                <button className="w-full bg-yellow-500 text-white py-2 rounded-lg text-sm font-semibold">Play Now</button>
+                <button
+                onClick={() => router.push('/games')}
+                className="w-full bg-yellow-500 text-white py-2 rounded-lg text-sm font-semibold">Play Now</button>
               </div>
             </div>
           </div>

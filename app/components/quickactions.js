@@ -8,7 +8,7 @@ const quickActions = [
   { icon: FaBolt, label: "Quick Play", href: "/games" },
   { icon: FaMedal, label: "LeaderBoard", href: "/leaderboard" },
   { icon: FaTrophy, label: "Results", href: "/results" },
-  { icon: FaGift, label: "Rewards", href: "/games" },
+  { icon: FaGift, label: "Rewards", href: "/rewards" },
 ];
 
 const QuickActions = () => {

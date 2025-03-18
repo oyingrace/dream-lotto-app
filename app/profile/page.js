@@ -1,10 +1,15 @@
+"use client";
 import React from 'react';
 import Header from '../components/header';
 import { Navigation } from '../components/navigation';
 import { IoChevronForward } from 'react-icons/io5';
 import Image from 'next/image';
+import { useRouter } from "next/navigation";
 
 const ProfilePage = () => {
+
+  const router = useRouter();
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Header */}
@@ -83,7 +88,9 @@ const ProfilePage = () => {
           </div>
 
           {/* Log Out */}
-          <button className="w-full bg-white text-red-500 font-medium py-4 rounded-lg mb-4">
+          <button 
+           onClick={() => router.push('/')}
+          className="w-full bg-white text-red-500 font-medium py-4 rounded-lg mb-4">
             Log Out
           </button>
         </div>

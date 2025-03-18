@@ -1,6 +1,8 @@
 // File: app/page.js
 import Image from 'next/image';
 import Link from 'next/link';
+import { IoTicketOutline } from "react-icons/io5";
+import { IoHelpCircleOutline } from "react-icons/io5";
 
 export default function HomePage() {
   return (
@@ -36,22 +38,16 @@ export default function HomePage() {
       </div>
 
       <div className="w-full max-w-xs space-y-4">
-        <Link href="/auth/signin" className="btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
-          Play Now
-        </Link>
-        
-        <Link href="/home" className="btn-secondary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-          </svg>
-          How to Play
-        </Link>
-      </div>
+  <Link href="/auth/signin" className="btn-primary">
+    <IoTicketOutline size={24} />
+    Play Now
+  </Link>
+  
+  <Link href="/home" className="btn-secondary">
+    <IoHelpCircleOutline size={24} />
+    How to Play
+  </Link>
+</div>
     </div>
   );
 }
