@@ -1,4 +1,4 @@
-// components/RecentTransactions.jsx
+// components/recentTransactions.js
 import React from 'react';
 
 // Transaction Item Component
