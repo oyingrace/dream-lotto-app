@@ -38,7 +38,7 @@ export default function GameDetailModal({ game, onClose }) {
           <div className="bg-white rounded-lg p-4 mb-6 shadow">
             <h3 className="font-semibold mb-3">Select Your Numbers</h3>
             <div className="grid grid-cols-5 gap-2 max-h-48 overflow-y-auto">
-              {Array.from({ length: 100 }, (_, i) => i + 1).map((num) => (
+              {Array.from({ length: 100 }, (_, i) => i + 0).map((num) => (
                 <button
                   key={num}
                   className={`w-full aspect-square rounded-full border flex items-center justify-center text-lg ${

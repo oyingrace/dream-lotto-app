@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { FaBolt, FaHashtag, FaTrophy, FaGift } from "react-icons/fa6"; // FontAwesome6 Icons
+import { FaBolt, FaHashtag, FaTrophy, FaGift } from "react-icons/fa6";
+import { FaMedal } from 'react-icons/fa';
 
 const quickActions = [
   { icon: FaBolt, label: "Quick Play", href: "/games" },
-  { icon: FaHashtag, label: "Pick Numbers", href: "/games" },
-  { icon: FaTrophy, label: "Results", href: "/games" },
+  { icon: FaMedal, label: "LeaderBoard", href: "/leaderboard" },
+  { icon: FaTrophy, label: "Results", href: "/results" },
   { icon: FaGift, label: "Rewards", href: "/games" },
 ];
 

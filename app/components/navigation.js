@@ -1,14 +1,15 @@
 // File: app/components/navigation.js
 import Link from 'next/link';
-import { FaHome, FaPlayCircle, FaRegChartBar, FaWallet, FaUser } from 'react-icons/fa';
+import { FaHome, FaPlayCircle, FaRegChartBar, FaWallet, FaUser, FaMedal, FaTicketAlt } from 'react-icons/fa';
 
 export function Navigation({ activePage }) {
   const navItems = [
     { name: "Home", href: "/home", icon: <FaHome size={20} /> },
-    { name: "Play", href: "/games", icon: <FaPlayCircle size={20} /> },
-    { name: "Results", href: "/games", icon: <FaRegChartBar size={20} /> },
-    { name: "Wallet", href: "/games", icon: <FaWallet size={20} /> },
-    { name: "Profile", href: "/games", icon: <FaUser size={20} /> }
+    { name: "Play", href: "/games", icon: <FaTicketAlt size={20} /> },
+    { name: "Results", href: "/results", icon: <FaRegChartBar size={20} /> },
+    { name: "Leaders", href: "/leaderboard", icon: <FaMedal size={20} /> },
+    { name: "Wallet", href: "/wallet", icon: <FaWallet size={20} /> },
+    { name: "Profile", href: "/profile", icon: <FaUser size={20} /> }
   ];
 
   return (

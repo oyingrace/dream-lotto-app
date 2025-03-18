@@ -3,7 +3,6 @@
 export default function LatestResults({ results }) {
   return (
     <div className="mb-6">
-      <h3 className="font-semibold mb-3">Latest Results</h3>
 
       {results.map((result, index) => (
         <div key={index} className="border rounded-lg p-4 mb-3 bg-white">
