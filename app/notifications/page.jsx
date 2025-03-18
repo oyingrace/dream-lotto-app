@@ -64,7 +64,7 @@ export default function NotificationsPage() {
         id: 6,
         type: 'jackpot',
         title: 'Mega Jackpot Alert',
-        message: 'This week\'s jackpot has reached ₦10 million! Don\'t miss your chance.',
+        message: "This week's jackpot has reached ₦10 million! Don't miss your chance.",
         date: '2025-03-10T08:30:00',
         isRead: false,
         icon: 'megaphone'
