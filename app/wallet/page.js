@@ -49,7 +49,7 @@ const WalletPage = () => {
             <div className="flex gap-4">
               <button className="flex items-center justify-center gap-2 flex-1 bg-yellow-500 text-white rounded-lg py-3 px-4">
                 <FaDownload className="text-white" />
-                <span>Deposit Funds</span>
+                <span>Deposit</span>
               </button>
               <button className="flex items-center justify-center gap-2 flex-1 bg-yellow-500 text-white rounded-lg py-3 px-4">
                 <IoArrowForward className="text-white" />
