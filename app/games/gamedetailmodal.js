@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoArrowBack } from "react-icons/io5";
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function GameDetailModal({ game, onClose }) {
   const [selectedNumbers, setSelectedNumbers] = useState([]);
@@ -29,7 +30,7 @@ export default function GameDetailModal({ game, onClose }) {
         <div className="overflow-y-auto flex-1 p-4 pb-16">
           {/* Game Image */}
           <div className="mb-4 flex justify-center">
-            <img src={game.image} alt={game.name} className="w-32 h-32 object-contain" />
+            <Image src={game.image} alt={game.name} className="w-32 h-32 object-contain" />
           </div>
           <h2 className="text-xl font-bold text-center mb-4">{game.name}</h2>
           <p className="text-sm text-gray-600 text-center mb-6">{game.description}</p>

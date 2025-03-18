@@ -52,7 +52,7 @@ export default function LeaderboardPage() {
           {/* Leaderboard Title */}
           <div className="mb-4 text-center">
             <h1 className="text-2xl font-bold mb-2">Dream Lotto Champions</h1>
-            <p className="text-gray-500 text-sm">See who's winning big this month</p>
+            <p className="text-gray-500 text-sm">See who&apos;s winning big this month</p>
           </div>
   
           {/* Top 3 Winners */}
