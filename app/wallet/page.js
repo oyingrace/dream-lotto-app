@@ -4,7 +4,7 @@ import Header from '../components/header';
 import { Navigation } from '../components/navigation';
 import { FaDownload } from 'react-icons/fa';
 import { IoArrowForward } from 'react-icons/io5';
-import RecentTransactions from '../components/recentTransactions';
+import RecentTransactions from '../components/RecentTransactions';
 
 
 const WalletPage = () => {
