@@ -40,7 +40,7 @@ export default function DashboardPage() {
   <div className="grid grid-cols-2 gap-4">
     <div className="border dark:border-dark-bg-secondary rounded-lg overflow-hidden bg-white dark:bg-dark-bg-primary transition-colors duration-200">
       <div className="h-24 relative">
-        <Image src="/images/lotto-balls-colorful.jpg" alt="Premier 2-sure" fill className="object-cover" />
+        <Image src="/images/premier2sure.png" alt="Premier 2-sure" fill className="object-cover" />
       </div>
       <div className="p-3">
         <h4 className="font-semibold mb-1 text-gray-800 dark:text-dark-text-primary">Premier 2-sure</h4>
