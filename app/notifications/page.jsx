@@ -181,9 +181,9 @@ export default function NotificationsPage() {
         )}
       </main>
       
-      <div className="fixed bottom-0 left-0 right-0">
+       <div className="fixed bottom-0 left-0 right-0">
         <Navigation />
-      </div>
+      </div> 
     </div>
   );
 }
