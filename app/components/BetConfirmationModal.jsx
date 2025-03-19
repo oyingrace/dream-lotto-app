@@ -17,6 +17,11 @@ const BetConfirmationModal = ({ isOpen, onClose, onConfirm }) => {
     if (pin.length < 4) {
       setPin(prev => prev + value);
       setActiveKey(value);
+      
+      // Reset activeKey after a short delay to create a "press" effect
+      setTimeout(() => {
+        setActiveKey(null);
+      }, 150);
     }
   };
 
@@ -135,19 +140,19 @@ const BetConfirmationModal = ({ isOpen, onClose, onConfirm }) => {
 
               {/* Numeric Keypad */}
               <div className="grid grid-cols-3 gap-3">
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
-                 <button
-                 key={num}
-                 className={`h-14 rounded-lg font-semibold text-lg dark:text-dark-text-primary ${
-                   activeKey === num
-                     ? "bg-dream-blue text-white border-dream-blue dark:bg-dream-blue-dark"
-                     : "bg-gray-100 dark:bg-dark-bg-secondary"
-                 }`}
-                 onClick={() => handleKeyPress(num.toString())}
-               >
-                    {num}
-                  </button>
-                ))}
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+              <button
+             key={num}
+             className={`h-14 rounded-lg font-semibold text-lg dark:text-dark-text-primary ${
+              activeKey === num.toString()  // Convert num to string for comparison
+             ? "bg-dream-blue text-white border-dream-blue dark:bg-dream-blue-dark"
+              : "bg-gray-100 dark:bg-dark-bg-secondary"
+             }`}
+             onClick={() => handleKeyPress(num.toString())}
+             >
+           {num}
+          </button>
+          ))}
                 <button
                   className="bg-gray-100 dark:bg-dark-bg-secondary h-14 rounded-lg font-semibold dark:text-dark-text-primary"
                   onClick={handleBackspace}
@@ -155,11 +160,13 @@ const BetConfirmationModal = ({ isOpen, onClose, onConfirm }) => {
                   ←
                 </button>
                 <button
-                  className="bg-gray-100 dark:bg-dark-bg-secondary h-14 rounded-lg font-semibold text-lg dark:text-dark-text-primary"
-                  onClick={() => handleKeyPress('0')}
-                >
-                  0
-                </button>
+                className={`bg-gray-100 dark:bg-dark-bg-secondary h-14 rounded-lg font-semibold text-lg dark:text-dark-text-primary ${
+                activeKey === '0' ? "bg-dream-blue text-white border-dream-blue dark:bg-dream-blue-dark" : ""
+                 }`}
+                onClick={() => handleKeyPress('0')}
+                 >
+                 0
+               </button>
                 <button
                   className={`h-14 rounded-lg font-semibold text-lg text-white ${
                     pin.length === 4 
