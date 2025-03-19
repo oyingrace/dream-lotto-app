@@ -76,7 +76,7 @@ const RecentWinners = () => {
         <h3 className="font-semibold">Recent Winners</h3>
       </div> */}
       
-      <div className="bg-yellow-50 rounded-lg p-4 border border-yellow-100">
+      <div className="bg-yellow-50 dark:bg-dark-bg-secondary border border-yellow-100 dark:border-dark-bg-primary rounded-lg p-4 transition-colors duration-200">
        {/*  <div className="flex items-center mb-3">
           <div className="bg-yellow-500 rounded-full p-1 mr-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
@@ -99,19 +99,19 @@ const RecentWinners = () => {
             {winnersList.map((winner) => (
               <div 
                 key={winner.key}
-                className="mb-3 p-3 border rounded-lg bg-white shadow-sm"
+                className="mb-3 p-3 border rounded-lg bg-white dark:bg-dark-bg-primary border-gray-100 dark:border-dark-bg-secondary shadow-sm dark:shadow-none transition-colors duration-200"
               >
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gray-200 dark:bg-dark-bg-secondary text-gray-700 dark:text-dark-text-primary rounded-full flex items-center justify-center transition-colors duration-200">
                     {winner.name.charAt(0)}
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between">
-                      <p className="font-medium text-sm">{winner.name}</p>
-                      <p className="text-xs text-gray-500">{winner.timeAgo}</p>
+                      <p className="font-medium text-sm text-gray-800 dark:text-dark-text-primary">{winner.name}</p>
+                      <p className="text-xs text-gray-500 dark:text-dark-text-secondary">{winner.timeAgo}</p>
                     </div>
-                    <p className="text-sm mt-1">
-                      Won <span className="font-bold text-green-600">{formatAmount(winner.amount)}</span> on {winner.game}
+                    <p className="text-sm mt-1 text-gray-700 dark:text-dark-text-secondary">
+                      Won <span className="font-bold text-green-600 dark:text-green-400">{formatAmount(winner.amount)}</span> on {winner.game}
                     </p>
                   </div>
                 </div>

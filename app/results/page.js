@@ -71,7 +71,7 @@ const ResultsPage = () => {
     : LatestResultsData.filter(game => game.type === selectedGame);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-dark-bg-primary">
       {/* Header */}
       <Header />
 
@@ -80,38 +80,39 @@ const ResultsPage = () => {
         <h1 className="text-xl font-bold">Latest Results</h1>
       </div>
 
+     
       {/* Filters */}
-      <div className="flex justify-between p-4">
-        <div className="relative w-1/2 mr-2">
-          <select
-            className="w-full bg-gray-100 rounded-md px-4 py-2 appearance-none"
-            value={selectedGame}
-            onChange={(e) => setSelectedGame(e.target.value)}
-          >
-            <option>All Games</option>
-            <option>Nap 3</option>
-            <option>Nap 4</option>
-            <option>Direct Banker</option>
-            <option>Premier 2 Sure</option>
-          </select>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <FaChevronDown className="text-gray-400 text-xs" />
-          </div>
-        </div>
-        <div className="relative w-1/2 ml-2">
-          <select className="w-full bg-gray-100 rounded-md px-4 py-2 appearance-none">
-            <option>Feb</option>
-            <option>Jan</option>
-            <option>Mar</option>
-            <option>Apr</option>
-            <option>May</option>
-            <option>Jun</option>
-          </select>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-            <FaChevronDown className="text-gray-400 text-xs" />
-          </div>
-        </div>
-      </div>
+<div className="flex justify-between p-4">
+  <div className="relative w-1/2 mr-2">
+    <select
+      className="w-full bg-gray-100 dark:bg-dark-bg-secondary dark:text-dark-text-primary rounded-md px-4 py-2 appearance-none"
+      value={selectedGame}
+      onChange={(e) => setSelectedGame(e.target.value)}
+    >
+      <option>All Games</option>
+      <option>Nap 3</option>
+      <option>Nap 4</option>
+      <option>Direct Banker</option>
+      <option>Premier 2 Sure</option>
+    </select>
+    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+      <FaChevronDown className="text-gray-400 dark:text-dark-text-secondary text-xs" />
+    </div>
+  </div>
+  <div className="relative w-1/2 ml-2">
+    <select className="w-full bg-gray-100 dark:bg-dark-bg-secondary dark:text-dark-text-primary rounded-md px-4 py-2 appearance-none">
+      <option>Feb</option>
+      <option>Jan</option>
+      <option>Mar</option>
+      <option>Apr</option>
+      <option>May</option>
+      <option>Jun</option>
+    </select>
+    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+      <FaChevronDown className="text-gray-400 dark:text-dark-text-secondary text-xs" />
+    </div>
+  </div>
+</div>
 
       {/* Results */}
       <div className="flex-1 p-4">

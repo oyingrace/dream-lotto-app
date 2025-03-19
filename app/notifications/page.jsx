@@ -124,39 +124,39 @@ export default function NotificationsPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-dark-bg-primary">
       <Header />
       
       <main className="flex-grow pb-20">
         <div className="flex items-center justify-center relative px-4 py-6">
           <button 
             onClick={() => router.push('/home')} 
-            className="absolute left-4 p-2 text-gray-700 hover:text-dream-blue transition"
+            className="absolute left-4 p-2 text-gray-700 dark:text-dark-text-secondary hover:text-dream-blue dark:hover:text-dream-yellow transition"
             aria-label="Go back to home"
           >
             <IoArrowBack size={24} />
           </button>
-          <h1 className="text-2xl font-bold text-gray-800">Notifications</h1>
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-dark-text-primary">Notifications</h1>
         </div>
-
+  
         {isLoading ? (
           <div className="flex justify-center items-center h-64">
-            <div className="w-12 h-12 border-4 border-dream-blue border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-12 h-12 border-4 border-dream-blue dark:border-dream-blue-light border-t-transparent rounded-full animate-spin"></div>
           </div>
         ) : notifications.length === 0 ? (
           <div className="text-center py-16 px-4">
-            <div className="bg-gray-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <IoMegaphoneOutline size={32} className="text-gray-400" />
+            <div className="bg-gray-100 dark:bg-dark-bg-secondary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <IoMegaphoneOutline size={32} className="text-gray-400 dark:text-dark-text-secondary" />
             </div>
-            <h2 className="text-xl font-semibold text-gray-700 mb-2">No Notifications</h2>
-            <p className="text-gray-500 max-w-xs mx-auto">You don't have any notifications yet. Check back later!</p>
+            <h2 className="text-xl font-semibold text-gray-700 dark:text-dark-text-primary mb-2">No Notifications</h2>
+            <p className="text-gray-500 dark:text-dark-text-secondary max-w-xs mx-auto">You don't have any notifications yet. Check back later!</p>
           </div>
         ) : (
           <div className="px-4 space-y-2">
             {notifications.map((notification) => (
               <div 
                 key={notification.id}
-                className={`p-4 rounded-lg bg-white shadow flex items-start ${!notification.isRead ? 'border-l-4 border-dream-blue' : ''}`}
+                className={`p-4 rounded-lg bg-white dark:bg-dark-bg-secondary shadow dark:shadow-none flex items-start ${!notification.isRead ? 'border-l-4 border-dream-blue dark:border-dream-blue-light' : ''}`}
                 onClick={() => markAsRead(notification.id)}
               >
                 <div className="flex-shrink-0 mr-3">
@@ -164,14 +164,14 @@ export default function NotificationsPage() {
                 </div>
                 <div className="flex-grow">
                   <div className="flex justify-between items-start">
-                    <h3 className={`font-semibold ${!notification.isRead ? 'text-gray-900' : 'text-gray-700'}`}>
+                    <h3 className={`font-semibold ${!notification.isRead ? 'text-gray-900 dark:text-dark-text-primary' : 'text-gray-700 dark:text-dark-text-secondary'}`}>
                       {notification.title}
                     </h3>
-                    <span className="text-xs text-gray-500 ml-2">
+                    <span className="text-xs text-gray-500 dark:text-dark-text-secondary ml-2">
                       {formatDate(notification.date)}
                     </span>
                   </div>
-                  <p className={`text-sm mt-1 ${!notification.isRead ? 'text-gray-800' : 'text-gray-600'}`}>
+                  <p className={`text-sm mt-1 ${!notification.isRead ? 'text-gray-800 dark:text-dark-text-primary' : 'text-gray-600 dark:text-dark-text-secondary'}`}>
                     {notification.message}
                   </p>
                 </div>

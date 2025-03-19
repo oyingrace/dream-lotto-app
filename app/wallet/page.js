@@ -37,41 +37,40 @@ const WalletPage = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-dark-bg-primary">
       <Header />
 
       <div className="flex-1 overflow-y-auto pb-20">
-        <div className="p-4">
-          <div className="bg-white p-4 rounded-lg">
-            <p className="text-sm mb-1">Available Balance</p>
-            <h2 className="text-3xl font-bold mb-4">₦2500.00</h2>
+  <div className="p-4">
+    <div className="bg-white dark:bg-dark-bg-secondary p-4 rounded-lg">
+      <p className="text-sm mb-1 dark:text-dark-text-secondary">Available Balance</p>
+      <h2 className="text-3xl font-bold mb-4 dark:text-dark-text-primary">₦2500.00</h2>
 
-            <div className="flex gap-4">
-              <button className="flex items-center justify-center gap-2 flex-1 bg-yellow-500 text-white rounded-lg py-3 px-4">
-                <FaDownload className="text-white" />
-                <span>Deposit</span>
-              </button>
-              <button className="flex items-center justify-center gap-2 flex-1 bg-yellow-500 text-white rounded-lg py-3 px-4">
-                <IoArrowForward className="text-white" />
-                <span>Withdraw</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Recent Transactions */}
-        <div className="px-4 pb-4">
-        <h2 className="text-xl font-bold mb-4">Recent Transactions</h2>
-          <RecentTransactions transactions={transactions} />
-
-          <Link href="/transactions">
-          <button className="w-full bg-yellow-500 text-black font-medium py-4 rounded-lg mt-2">
-           View All Transactions
-          </button>
-          </Link>
-
-        </div>
+      <div className="flex gap-4">
+        <button className="flex items-center justify-center gap-2 flex-1 bg-yellow-500 dark:bg-dream-yellow-subtlelight text-white rounded-lg py-3 px-4">
+          <FaDownload className="text-white" />
+          <span>Deposit</span>
+        </button>
+        <button className="flex items-center justify-center gap-2 flex-1 bg-yellow-500 dark:bg-dream-yellow-subtlelight text-white rounded-lg py-3 px-4">
+          <IoArrowForward className="text-white" />
+          <span>Withdraw</span>
+        </button>
       </div>
+    </div>
+  </div>
+
+  {/* Recent Transactions */}
+  <div className="px-4 pb-4">
+    <h2 className="text-xl font-bold mb-4 dark:text-dark-text-primary">Recent Transactions</h2>
+    <RecentTransactions transactions={transactions} />
+
+    <Link href="/transactions">
+      <button className="w-full bg-yellow-500 dark:bg-dream-yellow-subtlelight text-black dark:text-white font-medium py-4 rounded-lg mt-2">
+        View All Transactions
+      </button>
+    </Link>
+  </div>
+</div>
 
       <div className="sticky bottom-0 w-full">
         <Navigation activePage="wallet" />

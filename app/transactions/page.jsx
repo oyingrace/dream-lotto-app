@@ -27,14 +27,14 @@ const TransactionsPage = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-dark-bg-primary">
       <Header />
 
       {/* Back Button */}
       <div className="relative flex items-center p-4">
   <button 
     onClick={() => router.push('/wallet')} 
-    className="text-xl text-gray-700 absolute left-4"
+    className="text-xl text-gray-700 absolute left-4 hover:text-dream-blue dark:hover:text-dream-yellow transition"
   >
     <IoArrowBack />
   </button>
