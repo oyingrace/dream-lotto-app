@@ -64,12 +64,6 @@ const ProfilePage = () => {
             <IoChevronForward className="text-gray-400 dark:text-dark-text-secondary" />
           </div>
   
-          {/* Language */}
-          <div className="bg-white dark:bg-dark-bg-secondary rounded-lg p-4 flex justify-between items-center mb-4">
-            <span className="text-lg dark:text-dark-text-primary">Language</span>
-            <span className="text-gray-500 dark:text-dark-text-secondary">English</span>
-          </div>
-  
           {/* Privacy Policy */}
           <div className="bg-white dark:bg-dark-bg-secondary rounded-lg p-4 flex justify-between items-center mb-4">
             <span className="text-lg dark:text-dark-text-primary">Privacy Policy</span>
