@@ -29,7 +29,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem',
