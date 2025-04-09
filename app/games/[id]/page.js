@@ -21,10 +21,76 @@ export default function GameDetailPage({ params }) {
       try {
         // Use the game data from the GameSelectionPage
         const games = [
-          { id: "premier-2-sure", name: "Premier 2-Sure", description: "Pick 2 numbers, match both to win big!", image: "/images/premier2sure.png" },
-          { id: "nap-3", name: "Nap 3", description: "Pick 3 numbers, match all to win big!", image: "/images/nap3.png" },
-          { id: "nap-4", name: "Nap 4", description: "Pick 4 numbers for higher stakes!", image: "/images/nap4.png" },
-          { id: "direct-banker", name: "Direct Banker", description: "Pick one number, bet high, win big!", image: "/images/directbanker.png" },
+          { 
+            id: "nap-2", 
+            name: "Nap 2", 
+            description: "Pick 2 numbers, If they are drawn you win ₦240 X your ticket cost", 
+            image: "/images/premier2sure.png",
+             
+          },
+          { 
+            id: "perm-2", 
+            name: "Perm 2", 
+            description: "Perm games are exciting but more complex so please read our guide on this", 
+            image: "/images/premier2sure.png",
+             
+          },
+          { 
+            id: "nap-3", 
+            name: "Nap 3", 
+            description: "Pick 3 numbers, and if they are drawn you win ₦2,100 X your ticket cost", 
+            image: "/images/nap3.png",
+             
+          },
+          { 
+            id: "perm-3", 
+            name: "Perm 3", 
+            description: "Perm games are exciting but more complex so please read our guide on this", 
+            image: "/images/nap3.png",
+            
+          },
+          { 
+            id: "nap-4", 
+            name: "Nap 4", 
+            description: "Pick 4 numbers and if they are drawn, you win ₦6,000 X your ticket cost", 
+            image: "/images/nap4.png",
+            
+          },
+          { 
+            id: "perm-4", 
+            name: "Perm 4", 
+            description: "Perm games are exciting but more complex so please read our guide on this", 
+            image: "/images/nap4.png",
+            
+          },
+          { 
+            id: "nap-5", 
+            name: "Nap 5", 
+            description: "Pick 5 numbers and if they are drawn, you win ₦44,000 X your ticket cost", 
+            image: "/images/nap4.png",
+             
+          },
+          { 
+            id: "perm-5", 
+            name: "Perm 5", 
+            description: "Perm games are exciting but more complex so please read our guide on this", 
+            image: "/images/nap4.png",
+           
+          },
+          { 
+            id: "direct-banker", 
+            name: "Direct Banker", 
+            description: "Pick one number and if it is drawn you win ₦960 X your single stake amount", 
+            image: "/images/directbanker.png",
+            
+          },
+          { 
+            id: "against", 
+            name: "Against", 
+            description: "Permutations of numbers against each other.(Num winnings lines) X (Stake amount Per line) X 240 = Winnings", 
+            image: "/images/directbanker.png",
+             
+          },
         ];
         
         // Find the game with the matching ID
@@ -45,8 +111,8 @@ export default function GameDetailPage({ params }) {
     fetchGame();
   }, [id]);
 
-  const maxNumbersMap = { 'Premier 2-Sure': 2, 'Nap 3': 3, 'Nap 4': 4, 'Direct Banker': 1 };
-  const maxNumbers = maxNumbersMap[game?.name] || 4;
+  const maxNumbersMap = { 'Perm 2': 2,'Nap 2': 2, 'Nap 3': 3, 'Perm 3': 3, 'Nap 4': 4,'Perm 4': 4, 'Perm 5': 5, 'Direct Banker': 1, 'Against': 1 };
+  const maxNumbers = maxNumbersMap[game?.name] || 5;
 
   const toggleNumber = (num) => {
     if (selectedNumbers.includes(num)) {
@@ -108,7 +174,7 @@ export default function GameDetailPage({ params }) {
           <div className="bg-white dark:bg-dark-bg-secondary rounded-lg p-4 mb-6 shadow dark:shadow-none">
             <h3 className="font-semibold mb-3 dark:text-dark-text-primary">Select Your Numbers</h3>
             <div className="grid grid-cols-6 gap-1 max-h-48 overflow-y-auto">
-              {Array.from({ length: 100 }, (_, i) => i + 0).map((num) => (
+              {Array.from({ length: 90 }, (_, i) => i + 1).map((num) => (
                 <button
                   key={num}
                   className={`w-full aspect-square rounded-full border flex items-center justify-center text-sm ${
@@ -172,7 +238,7 @@ export default function GameDetailPage({ params }) {
               <li>Bets cannot be cancelled once placed.</li>
               <li>You must select exactly {maxNumbers} numbers.</li>
               <li>Minimum bet amount is ₦100.</li>
-              <li>Maximum bet amount is ₦6,000.</li>
+              <li>Maximum bet amount is ₦1,000,000.</li>
             </ul>
           </div> 
         </div>

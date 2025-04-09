@@ -43,8 +43,8 @@ export default function DashboardPage() {
         <Image src="/images/premier2sure.png" alt="Premier 2-sure" fill className="object-cover" />
       </div>
       <div className="p-3">
-        <h4 className="font-semibold mb-1 text-gray-800 dark:text-dark-text-primary">Premier 2-sure</h4>
-        <p className="text-xs text-gray-600 dark:text-dark-text-secondary mb-2">Pick 2 numbers, match both to win big!</p>
+        <h4 className="font-semibold mb-1 text-gray-800 dark:text-dark-text-primary">Nap 2</h4>
+        <p className="text-xs text-gray-600 dark:text-dark-text-secondary mb-2">Pick 2 numbers, If they are drawn you win ₦240 X your ticket cost</p>
         <button 
           onClick={() => router.push('/games')}
           className="w-full bg-dream-yellow hover:bg-dream-yellow-dark dark:bg-dream-yellow-subtlelight dark:hover:bg-dream-yellow text-white py-2 rounded-lg text-sm font-semibold transition-colors duration-200"
@@ -59,7 +59,7 @@ export default function DashboardPage() {
       </div>
       <div className="p-3">
         <h4 className="font-semibold mb-1 text-gray-800 dark:text-dark-text-primary">Nap3</h4>
-        <p className="text-xs text-gray-600 dark:text-dark-text-secondary mb-2">Pick 3 numbers, match all to win big!</p>
+        <p className="text-xs text-gray-600 dark:text-dark-text-secondary mb-2">Pick 3 numbers, and if they are drawn you win ₦2,100 X your ticket cost</p>
         <button
           onClick={() => router.push('/games')}
           className="w-full bg-dream-yellow hover:bg-dream-yellow-dark dark:bg-dream-yellow-subtlelight dark:hover:bg-dream-yellow text-white py-2 rounded-lg text-sm font-semibold transition-colors duration-200"
